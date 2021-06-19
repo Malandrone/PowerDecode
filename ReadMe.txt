@@ -45,7 +45,7 @@ Obfuscation layers of an input script are automatically detected and removed. A 
 [0]-Go back: Go back: returns to the previous menu
 
 -Manual decode mode 
-User can select a set of task to perform on an input script to manually remove obfuscation layers. The following options are avaiable:
+User can select a set of task to perform on an input script to manually remove obfuscation layers. The following options are available:
 [1]-Decode full script by regex: regular expression supported by PowerDecode are applied to the input script to remove a single obfuscation layer;
 [2]-Decode full script by IEX overriding: input script is executed in a local environment where Invoke-Expression cmdlet is replaced with Write-Output cmdlet  
 [3]-Decode base64: removes base64 encoding
