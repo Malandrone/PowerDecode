@@ -73,31 +73,23 @@ function SingleAutoDecode {
 Clear-Host
 PrintLogo
 
-Write-Host "Insert input file path ( file type must be .txt or .ps1 )"
+Write-Host "Insert input file path"
 $InputFilePath = Read-Host 
+while( (Test-Path $InputFilePath) -eq $false ) {	 
+	Clear-Host
+    PrintLogo
+    Write-Host "File path is not correct" -ForegroundColor red
+	Write-Host "Insert input file path"
+    $InputFilePath = Read-Host 
+    
+	
+}
+
 Write-Host "[OPTIONAL]Insert output file path (if you leave it blank, report will be saved in the PowerDecode folder)"
 $OutputFilePath = Read-Host 
 
 
-$correct = $false 
-while($correct -eq $false ) {
- try {
-	$correct = $true
-	PowerDecode $InputFilePath $OutputFilePath
- }
- catch {
-	$correct = $false 
-	Clear-Host
-    PrintLogo
-    Write-Host "File path is not correct" -ForegroundColor red
-	Write-Host "Insert input file path ( file type must be .txt or .ps1 )"
-    $InputFilePath = Read-Host 
-    Write-Host "[OPTIONAL]Insert output file path (if you leave it blank, report will be saved in the PowerDecode folder)"
-    $OutputFilePath = Read-Host  
-	
- }
-}
-
+PowerDecode $InputFilePath $OutputFilePath
 
 if($OutputFilePath -eq "") {
 	$DefaultPath = (Get-Location).Path
@@ -119,11 +111,20 @@ Clear-Host
 PrintLogo
 
 Write-Host "Insert input folder path"
-$InputFolderPath = Read-Host 
+$InputFolderPath = Read-Host
+while( (Test-Path $InputFolderPath) -eq $false ) {	 
+	Clear-Host
+    PrintLogo
+    Write-Host "Folder path is not correct" -ForegroundColor red
+	Write-Host "Insert input folder path"
+    $InputFolderPath = Read-Host 
+}
 Write-Host "[OPTIONAL]Insert output folder path (if you leave it blank, report will be saved in the PowerDecode folder)"
 $OutputFolderPath = Read-Host
 
-try {
+
+
+
 	$n=1 
     foreach ( $file in (Get-Childitem -Name $InputFolderPath)   ){
 
@@ -136,9 +137,9 @@ try {
      $n++; 		
     }
 	
-}
 
-catch{}
+
+
 
 
 
@@ -154,10 +155,18 @@ Clear-Host
 PrintLogo
 
 Write-Host "Insert input folder path"
-$InputFolderPath = Read-Host 
+$InputFolderPath = Read-Host
+while( (Test-Path $InputFolderPath) -eq $false ) {	 
+	Clear-Host
+    PrintLogo
+    Write-Host "Folder path is not correct" -ForegroundColor red
+	Write-Host "Insert input folder path"
+    $InputFolderPath = Read-Host 
+}
 Write-Host "[OPTIONAL]Insert output folder path (if you leave it blank, report will be saved in the PowerDecode folder)"
 $OutputFolderPath = Read-Host
-try{
+
+
 $n=1 
 foreach ( $file in (Get-Childitem -Name $InputFolderPath)   ){
 
@@ -180,9 +189,7 @@ foreach ( $file in (Get-Childitem -Name $InputFolderPath)   ){
 
  pause	
  }
-}
 
-catch{}
 
 return
 
@@ -230,7 +237,18 @@ do {
 $Choice = "NONE"
 Clear-Host
 PrintLogo
-Write-Host "Current script" -ForegroundColor green 
+
+
+if (GoodSyntax $ObfuscatedScript ) { 
+   Write-Host "[Syntax: OK] Current script:" -ForegroundColor green 
+   }
+else {
+   Write-Host "[Syntax Error] Current script:" -ForegroundColor red
+   $errors = powershell $ObfuscatedScript
+   Write-Host $errors  -ForegroundColor red
+}
+
+
 Write-Output $ObfuscatedScript 
 Write-Host "`n`r"
 
@@ -255,11 +273,11 @@ switch ( $Choice )
  {
     1   { #Deobfuscating by regex
 	     try{
-			 $DeobfuscatedScript = DeobfuscateByRegex  $ObfuscatedScript 
+			 $DeobfuscatedScript = (DeobfuscateByRegex  $ObfuscatedScript) |Out-String  
 		   }
 	     catch{}
 
-        if ( $DeobfuscatedScript -ne $ObfuscatedScript ) {
+        if ( ($DeobfuscatedScript -ne "" ) -and ($DeobfuscatedScript -ne $ObfuscatedScript) ) {
           $ObfuscationLayers.Add($DeobfuscatedScript)  
           $ObfuscatedScript = $DeobfuscatedScript  
             }
@@ -269,10 +287,10 @@ switch ( $Choice )
 	}
     2   { #Deobfuscating by IEX overriding
 	     try {
-	          $DeobfuscatedScript = DeobfuscateByOverriding  $ObfuscatedScript
+	          $DeobfuscatedScript = (DeobfuscateByOverriding  $ObfuscatedScript) |Out-String 
            }
          catch{}		   
-	     if ( (GoodSyntax $DeobfuscatedScript) -and ($DeobfuscatedScript -ne "" ) -and($DeobfuscatedScript -ne $ObfuscatedScript) ) {
+	     if (  ($DeobfuscatedScript -ne "" ) -and($DeobfuscatedScript -ne $ObfuscatedScript) ) {
           $ObfuscationLayers.Add($DeobfuscatedScript)  
           $ObfuscatedScript = $DeobfuscatedScript  
             }
@@ -288,6 +306,7 @@ switch ( $Choice )
 		   
 		 try{
 			 $DeobfuscatedScript = DecodeBase64 $ObfuscatedScript 
+		     $DeobfuscatedScript = CleanScript   $DeobfuscatedScript 
 		   }
 	     catch{}
 
@@ -326,7 +345,7 @@ switch ( $Choice )
 		
 		}
 		
-		if ( ( GoodSyntax $DeobfuscatedScript) -and ($DeobfuscatedScript -ne "") ) {
+		if (  $DeobfuscatedScript -ne "" ) {
           $ObfuscationLayers.Add($DeobfuscatedScript)  
           $ObfuscatedScript = $DeobfuscatedScript  
           Write-Host "Payload decoded successfully"  -ForegroundColor green
@@ -360,7 +379,7 @@ switch ( $Choice )
 		
 		}
 		
-		if ( ( GoodSyntax $DeobfuscatedScript) -and ($DeobfuscatedScript -ne "") ) {
+		if (  $DeobfuscatedScript -ne "" ) {
           $ObfuscationLayers.Add($DeobfuscatedScript)  
           $ObfuscatedScript = $DeobfuscatedScript  
           Write-Host "Payload decoded successfully"  -ForegroundColor green
@@ -373,86 +392,125 @@ switch ( $Choice )
 	
 	6   { #Replace a string (raw)
 	
+	$ContinueDeobfuscating = $true
+    $InitialScript = $ObfuscatedScript	
+	While ( $ContinueDeobfuscating -eq $true ) {
 	Clear-Host
-    PrintLogo 
-	Write-Host "Current script" -ForegroundColor green 
-    Write-Output $ObfuscatedScript  
-    Write-Host "`n`r"
-	Write-Host "Insert string to replace" -ForegroundColor yellow
-	$String = Read-Host
-	Write-Host "Insert replace" -ForegroundColor yellow
-	$Replace = Read-Host
-	
-	 try {
-			
-             
-			    $NewScript = $ObfuscatedScript.replace( $String , $Replace)
-               
-		   }
-         catch{}		   
-	     if ( (GoodSyntax $NewScript) -and($NewScript -ne $ObfuscatedScript) ) {
-          $ObfuscationLayers.Add($NewScript)  
-          $ObfuscatedScript = $NewScript  
-          Clear-Host
-          PrintLogo 
-	      Write-Host "Successfully replaced" -ForegroundColor green
-          pause		  
-			
-			}
-			
-			else {
-			Clear-Host
-            PrintLogo 
-	        Write-Host "Error: replace not valid" -ForegroundColor red
-            pause
-			
-			
-			}
+    PrintLogo
+	  if (GoodSyntax $ObfuscatedScript ) { 
+         Write-Host "[Syntax: OK] Current script:" -ForegroundColor green 
+     }
+      else {
+         Write-Host "[Syntax Error] Current script:" -ForegroundColor red
+		 $errors = powershell $ObfuscatedScript
+         Write-Host $errors  -ForegroundColor red
+      } 
+      Write-Output $ObfuscatedScript  
+      Write-Host "`n`r"
 	
 	
+	    Write-Host "Insert a string to replace ( insert # to terminate the task)" -ForegroundColor yellow
+	    $String = Read-Host
+		if ($String -eq "#") {break;}
+		Write-Host "Insert replace" -ForegroundColor yellow
+	    $Replace = Read-Host
+       
+	     
+ 
+	     try {
+	
+		  $NewScript = $ObfuscatedScript.replace( $String , $Replace)
+		  }
+         catch{}	
+		  Write-Host "Your entry:" -ForegroundColor yellow
+          Write-Host $String  		
+		  Write-Host "will be replaced with:" -ForegroundColor yellow
+		  Write-Host $Replace
+		
+
+		if (GoodSyntax $NewScript ) { 
+         Write-Host "Syntax will remain correct " -ForegroundColor green 
+        }
+        else {
+         Write-Host "There are syntax errors" -ForegroundColor red
+        }
+        Write-Host "Continue ? [y/n]"
+		$Response = Read-Host  
+		
+         if ($Response -eq "y") { 
+		   $ObfuscatedScript = $NewScript  
+		 
+		 }       
+			   
+   
+	 
+	 }
+		if ( $ObfuscatedScript -ne $InitialScript){ 
+		   $ObfuscationLayers.Add($ObfuscatedScript)  
+          }
+
+		
 	
 	}
 	
 	7   { #Replace a string (evaluate) 
 	
+	
+	$ContinueDeobfuscating = $true
+    $InitialScript = $ObfuscatedScript	
+	While ( $ContinueDeobfuscating -eq $true ) {
 	Clear-Host
-    PrintLogo 
-	Write-Host "Current script" -ForegroundColor green 
-    Write-Output $ObfuscatedScript  
-    Write-Host "`n`r"
-	Write-Host "Insert a string to evaluate" -ForegroundColor yellow
-	$String = Read-Host
-	
-	$EvaluatedString = IEX $String 
-	
-	try {
-			
-                if (  $EvaluatedString -ne ""  ){
-			    $NewScript = $ObfuscatedScript.replace( $String , $EvaluatedString)
-                }
-		   }
-         catch{}		   
-	     if ( (GoodSyntax $NewScript ) -and($NewScript -ne $ObfuscatedScript) ) {
-          $ObfuscationLayers.Add($NewScript)  
-          $ObfuscatedScript = $NewScript  
-          Clear-Host
-          PrintLogo
-          Write-Host "String evaluation returned the following string and has been successfully replaced" -ForegroundColor green 
-	      Write-Output $EvaluatedString		  
-          pause		  
-			
-			}
-			
-			else {
-			Clear-Host
-            PrintLogo 
-	        Write-Host "Error: replace not valid" -ForegroundColor red
-            pause
-			
-			}
+    PrintLogo
+	  if (GoodSyntax $ObfuscatedScript ) { 
+         Write-Host "[Syntax: OK] Current script:" -ForegroundColor green 
+     }
+      else {
+         Write-Host "[Syntax Error] Current script:" -ForegroundColor red
+		 $errors = powershell $ObfuscatedScript
+         Write-Host $errors  -ForegroundColor red
+      } 
+      Write-Output $ObfuscatedScript  
+      Write-Host "`n`r"
 	
 	
-	
+	    Write-Host "Insert a string to evaluate ( insert # to terminate the task)" -ForegroundColor yellow
+	    $String = Read-Host
+       
+	     if ($String -eq "#") {break;}
+ 
+	     try {
+	      
+	      $EvaluatedString = IEX $String
+		  $NewScript = $ObfuscatedScript.replace( $String , $EvaluatedString)
+		  }
+         catch{}	
+		  Write-Host "Your entry:" -ForegroundColor yellow
+          Write-Host $String  		
+		  Write-Host "will be replaced with:" -ForegroundColor yellow
+		  Write-Host $EvaluatedString
+		
+
+		if (GoodSyntax $NewScript ) { 
+         Write-Host "Syntax will remain correct " -ForegroundColor green 
+        }
+        else {
+         Write-Host "There are syntax errors" -ForegroundColor red
+        }
+        Write-Host "Continue ? [y/n]"
+		$Response = Read-Host  
+		
+         if ($Response -eq "y") { 
+		   $ObfuscatedScript = $NewScript  
+		 
+		 }
+			   
+   
+	 
+	 }
+		if ( $ObfuscatedScript -ne $InitialScript){ 
+		   $ObfuscationLayers.Add($ObfuscatedScript)  
+          }
+          
 	
 	
 	}
