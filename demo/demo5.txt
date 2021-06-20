@@ -1,3 +1,5 @@
+*Deobfuscated in manual mode
+
 Layer 1 - Obfuscation type: Compressed
 
 
