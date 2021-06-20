@@ -21,13 +21,22 @@ function GetScriptFromFile() {
 		else {
 			$FileContent = Get-Content $InputFile -Encoding UTF8 -ErrorAction Stop
 		}
-		foreach($line in $FileContent) {
-			$ObfuscatedScript += $line
-		}
 	}
+			
+	    
     catch {
 		throw "Error reading: '$($InputFile)'"
 	}
+	
+	if ( (($FileContent -match '@"') -and ($FileContent -match '"@'))   -or (($FileContent -match "@'") -and ($FileContent -match "@'"))){
+		$ObfuscatedScript = $FileContent | Out-String
+		
+		}
+	else {
+		  foreach($line in $FileContent) {
+		    $ObfuscatedScript += $line
+	        }
+		 }
 	
 	return $ObfuscatedScript
 }
