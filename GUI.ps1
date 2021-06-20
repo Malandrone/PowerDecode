@@ -300,27 +300,18 @@ switch ( $Choice )
 	
     3   { #Decode base64 
 	    
-	   if(IsBase64 $ObfuscatedScript ) {
-        if( !(IsStringBased $ObfuscatedScript) -and !(IsCompressed $ObfuscatedScript) -and !(IsEncoded $ObfuscatedScript)  ){
-       
 		   
 		 try{
 			 $DeobfuscatedScript = DecodeBase64 $ObfuscatedScript 
-		     $DeobfuscatedScript = CleanScript   $DeobfuscatedScript 
+		     $DeobfuscatedScript = (CleanScript $DeobfuscatedScript) |Out-String
 		   }
 	     catch{}
 
-        if ( $DeobfuscatedScript -ne $ObfuscatedScript ) {
+        if ( $DeobfuscatedScript.length -gt 0 ) {
           $ObfuscationLayers.Add($DeobfuscatedScript)  
           $ObfuscatedScript = $DeobfuscatedScript  
             }
-		 
-		 
-		
-	    
-        
-         }
-	    }
+	
 	}
 	
 	4   { #Decode deflate playload
@@ -337,20 +328,22 @@ switch ( $Choice )
          $DeflateStream = New-Object System.IO.Compression.DeflateStream ($MemoryStream, [System.IO.Compression.CompressionMode]::Decompress)
          $StreamReader = New-Object System.IO.StreamReader($DeflateStream)
          $DeobfuscatedScript = $StreamReader.readtoend()
+		 $DeobfuscatedScript = (CleanScript $DeobfuscatedScript) |Out-String
 		}
 		catch{
-			
-		  Write-Host "Error,payload was not a valid format"  -ForegroundColor red
-		  pause
 		
 		}
 		
-		if (  $DeobfuscatedScript -ne "" ) {
+		if (  $DeobfuscatedScript.length -gt 0 ) {
           $ObfuscationLayers.Add($DeobfuscatedScript)  
           $ObfuscatedScript = $DeobfuscatedScript  
           Write-Host "Payload decoded successfully"  -ForegroundColor green
 		  pause
-			}
+		}
+		else {
+		  Write-Host "Error,payload was not a valid format"  -ForegroundColor red
+		  pause	
+		}
         
 	    
 		
@@ -371,20 +364,24 @@ switch ( $Choice )
          $DeflateStream = New-Object System.IO.Compression.GZipStream($MemoryStream, [System.IO.Compression.CompressionMode]::Decompress)
          $StreamReader = New-Object System.IO.StreamReader($DeflateStream)
          $DeobfuscatedScript = $StreamReader.readtoend()
+		 $DeobfuscatedScript = (CleanScript $DeobfuscatedScript) |Out-String 
 		}
-		catch{
-			
-		  Write-Host "Error,payload was not a valid format"  -ForegroundColor red
-		  pause
+		catch{ 
 		
 		}
 		
-		if (  $DeobfuscatedScript -ne "" ) {
+		if (  $DeobfuscatedScript.length -gt 0 ) {
           $ObfuscationLayers.Add($DeobfuscatedScript)  
           $ObfuscatedScript = $DeobfuscatedScript  
           Write-Host "Payload decoded successfully"  -ForegroundColor green
 		  pause
-			}
+		}
+		else {
+		  Write-Host "Error,payload was not a valid format"  -ForegroundColor red
+		  pause	
+		}
+		
+			
         
 		
 	}
@@ -569,6 +566,9 @@ switch ( $Choice )
 	}
 
     10 { #Export report file
+	     $NumberOfLayers = $ObfuscationLayers.Count
+         $LastLayerIndex = $NumberOfLayers - 1     
+         $Plainscript = $ObfuscationLayers[$LastLayerIndex]
 	
 	      $result =  ForEach ($layer in $ObfuscationLayers){
             
