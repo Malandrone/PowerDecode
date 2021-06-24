@@ -244,8 +244,8 @@ if (GoodSyntax $ObfuscatedScript ) {
    }
 else {
    Write-Host "[Syntax Error] Current script:" -ForegroundColor red
-   $errors = powershell $ObfuscatedScript
-   Write-Host $errors  -ForegroundColor red
+   $Errors = GetSyntaxErrors $ObfuscatedScript
+   Write-Host $Errors  -ForegroundColor red
 }
 
 
@@ -399,8 +399,8 @@ switch ( $Choice )
      }
       else {
          Write-Host "[Syntax Error] Current script:" -ForegroundColor red
-		 $errors = powershell $ObfuscatedScript
-         Write-Host $errors  -ForegroundColor red
+		 $Errors = GetSyntaxErrors $ObfuscatedScript
+         Write-Host $Errors  -ForegroundColor red
       } 
       Write-Output $ObfuscatedScript  
       Write-Host "`n`r"
@@ -463,8 +463,8 @@ switch ( $Choice )
      }
       else {
          Write-Host "[Syntax Error] Current script:" -ForegroundColor red
-		 $errors = powershell $ObfuscatedScript
-         Write-Host $errors  -ForegroundColor red
+		 $Errors = GetSyntaxErrors $ObfuscatedScript
+         Write-Host $Errors  -ForegroundColor red
       } 
       Write-Output $ObfuscatedScript  
       Write-Host "`n`r"
@@ -478,6 +478,7 @@ switch ( $Choice )
 	     try {
 	      
 	      $EvaluatedString = IEX $String
+		  $EvaluatedString = "'"+$EvaluatedString+"'"
 		  $NewScript = $ObfuscatedScript.replace( $String , $EvaluatedString)
 		  }
          catch{}	
