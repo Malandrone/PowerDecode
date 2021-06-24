@@ -23,6 +23,7 @@ function DeobfuscateByRegex
        While( $NewScript -ne $OldScript )
        {
           
+			$OldScript = $NewScript 
 			
 			$TempScript  = ResolveStringFormats($NewScript )
 			if (GoodSyntax $TempScript ) { $NewScript = $TempScript  }
@@ -30,7 +31,7 @@ function DeobfuscateByRegex
 			$TempScript  = ResolveStringFormats2($NewScript )
 			if (GoodSyntax $TempScript ) { $NewScript = $TempScript  }
 			
-			$OldScript = $NewScript  
+			 
             $TempScript  = ReplaceMultiLineEscapes($NewScript)
             if ((GoodSyntax $TempScript)) { $NewScript = $TempScript  }
 			
