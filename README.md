@@ -22,6 +22,7 @@ The tool performs also code dynamic analysis, gathering useful informations abou
 
 ### How to use the tool
 Click on **PowerDecode.bat** to start the GUI
+
 PowerDecode can work in two different modes:
 - Automatic decode mode
 - Manual decode mode 
