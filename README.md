@@ -26,13 +26,13 @@ PowerDecode can work in two different modes:
 - Automatic decode mode
 - Manual decode mode 
 
-##### Automatic decode mode
+### Automatic decode mode
 Obfuscation layers of an input script are automatically detected and removed. A dynamic analysis is performed on the final layer. The following options are avaiable:
 - **[1]-Decode a script from a single file:** Takes as input the path of the file to analyze and the path of the file to save the report file (if this last field is left blank, report file will be saved in the PowerDecode folder)
 - **[2]-Decode multiple scripts from a folder:** Takes as input the folder path containg some files to analyze and the folder path to save the report files (if this last field is left blank, report files will be saved in the PowerDecode folder)
 - **[0]-Go back:** returns to the previous menu
 
-##### Manual decode mode 
+### Manual decode mode 
 User can select a set of tasks to perform on an input script to manually remove obfuscation layers. The following options are available:
 - **[1]-Decode full script by regex:** regular expression supported by PowerDecode are applied to the input script to remove a single obfuscation layer
 - **[2]-Decode full script by IEX overriding:** input script is executed in a local environment where Invoke-Expression cmdlet is replaced with Write-Output cmdlet (might execute malicious actions!)
@@ -49,7 +49,7 @@ User can select a set of tasks to perform on an input script to manually remove 
 - **[13]-Store and export report file:** saves all collected data on a .txt report file and stores the sample in the MalwareRepository.db
 - **[0]-Go back:** returns to the previous menu
  
-##### Malware repository
+### Malware repository
 PowerDecode includes a malware database( MalwareRepository.db) based on [LiteDB](https://www.litedb.org/). On this section, following options are avaiable:
 
 - **[1]-Query DB for a script:** checks if a script from an input file is stored on DB and if it is present, shows its de-obfuscated version
@@ -60,10 +60,10 @@ PowerDecode includes a malware database( MalwareRepository.db) based on [LiteDB]
 - **[6]-Export all URLs:** allows to export all stored URLs from MalwareRepository.db to an output file. 
 - **[0]-Go back:** returns to the previous menu
 
-##### Settings
+### Settings
 Two parameters can be set:
 - **[1]-Storage mode:** if it is set to "Enabled" analyzed scripts in automatic mode will be stored on MalwareRepository.db
 - **[2]-Step-by-step mode:** if it is set to "Enabled", decoding multiple scripts from a folder, the user is asked for confirmation before continuing with the analysis of the next file
 
-##### License
+### License
  GPL-3.0 
