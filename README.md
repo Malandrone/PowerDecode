@@ -29,8 +29,8 @@ PowerDecode can work in two different modes:
 
 ### Automatic decode mode
 Obfuscation layers of an input script are automatically detected and removed. A dynamic analysis is performed on the final layer. The following options are avaiable:
-- **[1]-Decode a script from a single file:** Takes as input the path of the file to analyze and the path of the file to save the report file (if this last field is left blank, report file will be saved in the PowerDecode folder)
-- **[2]-Decode multiple scripts from a folder:** Takes as input the folder path containg some files to analyze and the folder path to save the report files (if this last field is left blank, report files will be saved in the PowerDecode folder)
+- **[1]-Decode a script from a single file:** takes as input the path of the file to analyze and the path of the file to save the report file (if this last field is left blank, report file will be saved in the PowerDecode folder)
+- **[2]-Decode multiple scripts from a folder:** takes as input the folder path containg some files to analyze and the folder path to save the report files (if this last field is left blank, report files will be saved in the PowerDecode folder)
 - **[0]-Go back:** returns to the previous menu
 
 ### Manual decode mode 
@@ -42,9 +42,9 @@ User can select a set of tasks to perform on an input script to manually remove 
 - **[5]-Decode GZIP payload:** removes GZIPstream compression
 - **[6]-Replace a string (raw):** replaces a piece of the loaded script with a substring entered by the user
 - **[7]-Replace a string (evaluate):** replaces a piece of the loaded script with its evaluated form (might execute malicious actions!)
-- **[8]-URLs analysis:** Extracts URLs and checks their HTTP response status code
-- **[9]-Get variables content:** Extracts declared variables and shows their names and contents (might execute malicious actions!)
-- **[10]-Shellcode check:** Extracts shellcode as hexadecimal instructions
+- **[8]-URLs analysis:** extracts URLs and checks their HTTP response status code
+- **[9]-Get variables content:** extracts declared variables and shows their names and contents (might execute malicious actions!)
+- **[10]-Shellcode check:** extracts shellcode as hexadecimal instructions
 - **[11]-Undo last decoding task:** deletes the last layer of code obtained
 - **[12]-Report preview:** shows all collected data as it will be saved on the report file
 - **[13]-Store and export report file:** saves all collected data on a .txt report file and stores the sample in the MalwareRepository.db
