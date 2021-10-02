@@ -1,4 +1,4 @@
-
+![alt text](https://raw.githubusercontent.com/Malandrone/PowerDecode/main/Logo.PNG)
 # PowerDecode
 PowerDecode is a PowerShell-based tool for de-obfuscating PowerShell scripts obfuscated across multiple layers in different obfuscation forms including:
 - string concatenate/reorder/reverse/replace
