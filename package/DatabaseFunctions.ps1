@@ -170,7 +170,7 @@ function BuildRecordShellcode() {
    
    $String = ($ShellcodeData.replace("`r`n","")) |Out-String
   
-   $pattern = [regex] "uid\=7\&pid\=152\)\:[a-f0-9]{8,}Execution"
+   $pattern = [regex] "uid\=7\&pid\=152\)\:[A-Fa-f0-9]{8,}Execution"
    $matches = $pattern.matches($String)
    
    $HexString = ($matches[0]).Value
