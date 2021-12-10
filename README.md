@@ -70,3 +70,6 @@ Following parameters can be set:
 
 ### License
  GPL-3.0 
+
+### Paper
+G. M. Malandrone, G. Virdis, G. Giacinto , D. Maiorca. [PowerDecode: a PowerShell Script Decoder Dedicated to Malware Analysis](http://ceur-ws.org/Vol-2940/paper19.pdf). 5th Italian Conference on CyberSecurity (ITASEC), 2021.
