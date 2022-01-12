@@ -91,11 +91,11 @@ function DisplayDialogWindowFile() {
 
 
 <#
-Function name: DisplayDialogWindoFolder
+Function name: DisplayDialogWindowFolder
 Description: Displays a dialog window to set the input folder path
 Function calls: 
 Input:  -
-Output: $InputFile
+Output: $InputFolder
 #>
 
 function DisplayDialogWindowFolder() {
