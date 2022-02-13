@@ -25,10 +25,13 @@ The tool performs also code dynamic analysis, gathering useful informations abou
  - OS Windows 10 64 bit
  
 ### How to use the tool
- - Enable scripts execution: launch PowerShell as Administrator and run the command: 
+ - Enable scripts execution: launch PowerShell as Administrator and run the command:
+ 
    ```Set-ExecutionPolicy bypass```
- - If it doesn't work, open Registry Editor as Administrator and go to: 
+ - If it doesn't work, open Registry Editor as Administrator and go to:
+   
    ```Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\PowerShell```
+   
    Set the parameter "ExecutionPolicy" on value "Bypass"
  - Disable any antivirus software in order to allow the tool to analyze malware without interruption.
  - Click on **PowerDecode.bat** to start the GUI
