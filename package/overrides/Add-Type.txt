@@ -1,0 +1,8 @@
+function Add-Type {
+        param(
+            [Parameter(Mandatory=$True, Valuefrompipeline = $True)]
+            [string]$Object
+        )
+
+     return 
+}

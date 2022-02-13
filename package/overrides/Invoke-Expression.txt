@@ -1,0 +1,31 @@
+function Invoke-Expression()
+    {
+        param(
+            [Parameter( 
+                Mandatory=$True, 
+                Valuefrompipeline = $True)]
+            [String]$EvaluatedString
+        )
+        return $EvaluatedString
+    }
+
+function UpdateReport( ) {
+	param(
+        [Parameter(
+			Mandatory = $True)]
+        [string]$data 
+    )
+
+
+    $ReportFileName = "PowerDecode_2020_Malware_Analysis_Temp_Report"
+    $ReportOutFile =  [System.IO.Path]::GetTempPath() + $ReportFileName +".txt" 
+    
+    
+    $Report = Get-Content $ReportOutFile  
+    $Report += $data 
+    $Report | Out-File $ReportOutFile 
+
+
+return 
+
+}
