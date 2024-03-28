@@ -65,7 +65,7 @@ User can select a set of tasks to perform on an input script to manually remove 
 - **[0]-Go back:** returns to the previous menu
  
 ### Malware repository
-PowerDecode includes a malware database( MalwareRepository.db) based on [LiteDB](https://www.litedb.org/). On this section, following options are avaiable:
+PowerDecode includes a malware database( MalwareRepository.db) based on [LiteDB](https://www.litedb.org/). On this section, following options are available:
 
 - **[1]-Query DB for a script:** checks if a script from an input file is stored on DB and if it is present, shows its de-obfuscated version
 - **[2]-Query DB for a URL:** checks if an input URL is stored on DB and also shows stored malwares that connect to it 
