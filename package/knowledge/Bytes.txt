@@ -1,0 +1,1 @@
+The use of [byte[]] variables is an indicator of attempts to inject shellcode into a target system or process. Malicious instructions are written in low-level programming languages (assembly) and hidden in byte variables.

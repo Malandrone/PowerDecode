@@ -1,0 +1,1 @@
+rundll32.exe is often used by adversaries to load dynamic link libraries (DLLs) to execute malicious code.

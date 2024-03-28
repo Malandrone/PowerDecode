@@ -1,0 +1,1 @@
+Adversaries may abuse Regsvr32.exe to bypass application control using functionality to load COM scriptlets to execute malicious DLLs under user permissions.

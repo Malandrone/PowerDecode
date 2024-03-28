@@ -1,0 +1,1 @@
+The use of Net.WebClient object is an indicator of attempts to connect to a URL to download a malicious payload.
